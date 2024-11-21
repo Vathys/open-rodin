@@ -1,0 +1,35 @@
+[project]
+authors = [{ name = "Deep Desai" }]
+
+dependencies = [
+    "hydra-core",
+    "lightning",
+    "matplotlib",
+    "numpy",
+    "torch",
+    "torchvision",
+    "tqdm",
+]
+description = "An open source implementation of the paper 'Rodin: A Generative Model for Sculpting 3D Digital Avatars Using Diffusion'"
+license = { file = "LICENSE" }
+name = 'openrodin'
+readme = 'README.md'
+requires-python = ">=3.6"
+version = "0.1.0"
+
+[project.optional-dependencies]
+dev = ["black", "flake8", "ipykernel"]
+notebook = ["jupyterlab"]
+
+[tool.setuptools.packages.find]
+include = ["openrodin*"]
+exclude = ["outputs*", "data*"]
+
+
+[tool.setuptools.package-data]
+openrodin = ["configs/*.yaml"]
+
+
+[tool.isort]
+extend_skip = ["data"]
+profile = "black"

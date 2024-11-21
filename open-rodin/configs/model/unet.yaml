@@ -1,0 +1,21 @@
+name: "unet"
+trainable: True
+image_size: 512
+in_channels: 3
+out_channels: 3
+model_channels: 192
+num_res_blocks: 2
+attention_resolutions: [32, 16, 8]
+dropout: 0.0
+channel_mult: [1, 2, 4, 8]
+conv_resample: True
+dims: 2
+num_classes: null
+use_checkpoint: False
+use_fp16: False
+num_heads: 1
+num_head_channels: 64
+num_heads_upsample: null
+use_scale_shift_norm: True
+resblock_updown: True
+use_new_attention_order: False
